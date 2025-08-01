@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VYNIX - Streaming Film AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>VYNIX</h1>
+    <button id="donateBtn">Donasi</button>
+  </header>
+
+  <main class="film-container">
+    <div class="film" onclick="playFilm('film1.mp4')">
+      <img src="poster1.jpg" alt="Film 1">
+    </div>
+    <div class="film" onclick="playFilm('film2.mp4')">
+      <img src="poster2.jpg" alt="Film 2">
+    </div>
+    <!-- Tambahkan film lainnya di sini -->
+  </main>
+
+  <div class="video-player" id="videoPlayer">
+    <video id="mainVideo" controls></video>
+    <button onclick="closeVideo()">Tutup</button>
+  </div>
+
+  <div class="donasi-popup" id="donasiPopup">
+    <div class="donasi-content">
+      <span id="closePopup">&times;</span>
+      <h2>Dukung Kami</h2>
+      <p>Scan kode QR untuk berdonasi lewat Saweria</p>
+      <img src="https://your-qr-image-url-here.com" alt="QR Saweria" class="qr-img">
+      <p><strong>Terima kasih atas dukungannya!</strong></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Tentang Kami: MUHAMAD RIVAL</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
