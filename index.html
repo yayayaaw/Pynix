@@ -1,46 +1,69 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VYNIX - Streaming Film AI</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vynix - Streaming Film</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>VYNIX</h1>
-    <button id="donateBtn">Donasi</button>
-  </header>
-
-  <main class="film-container">
-    <div class="film" onclick="playFilm('film1.mp4')">
-      <img src="poster1.jpg" alt="Film 1">
+    <div class="header">
+        <div class="logo">Vynix</div>
+        <button class="support-btn" id="supportBtn">
+            <i class="fas fa-heart"></i> Support
+        </button>
     </div>
-    <div class="film" onclick="playFilm('film2.mp4')">
-      <img src="poster2.jpg" alt="Film 2">
+
+    <div class="main-content">
+        <h2 class="section-title">Film Terbaru</h2>
+        <div class="video-grid" id="videoGrid">
+            </div>
     </div>
-    <!-- Tambahkan film lainnya di sini -->
-  </main>
 
-  <div class="video-player" id="videoPlayer">
-    <video id="mainVideo" controls></video>
-    <button onclick="closeVideo()">Tutup</button>
-  </div>
-
-  <div class="donasi-popup" id="donasiPopup">
-    <div class="donasi-content">
-      <span id="closePopup">&times;</span>
-      <h2>Dukung Kami</h2>
-      <p>Scan kode QR untuk berdonasi lewat Saweria</p>
-      <img src="https://your-qr-image-url-here.com" alt="QR Saweria" class="qr-img">
-      <p><strong>Terima kasih atas dukungannya!</strong></p>
+    <div class="modal" id="videoModal">
+        <span class="close-modal" id="closeModal">×</span>
+        <div class="modal-content">
+            <div class="player-container">
+                <iframe class="player-iframe" id="videoPlayer" src="" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+                <h2 class="detail-title" id="modalTitle">Judul Film</h2>
+                <p class="detail-description" id="modalDescription">
+                    Deskripsi film akan muncul di sini. Ini adalah contoh deskripsi yang menjelaskan 
+                    tentang film yang sedang ditonton. Deskripsi ini bisa berisi sinopsis, pemeran, 
+                    sutradara, dan informasi lainnya tentang film tersebut.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <footer>
-    <p>Tentang Kami: MUHAMAD RIVAL</p>
-  </footer>
+    <div class="support-modal" id="supportModal">
+        <div class="support-content">
+            <span class="close-support" id="closeSupport">×</span>
+            <h2 style="color: #000000; margin-bottom: 20px;">Support Vynix</h2>
+            <p style="margin-bottom: 20px;">Scan QR Code atau transfer ke nomor berikut:</p>
+            <div class="qr-code">
+                <i class="fas fa-qrcode"></i>
+            </div>
+            <div class="dana-number">0812-3456-7890 (DANA)</div>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="footer">
+        <h3 class="footer-title">Tentang Vynix</h3>
+        <div class="footer-content">
+            <p>Vynix adalah platform streaming film yang menyediakan berbagai konten hiburan berkualitas. 
+            Kami berkomitmen untuk memberikan pengalaman menonton terbaik dengan koleksi film terbaru dan 
+            klasik dari berbagai genre. Dukung kami melalui support untuk terus menyediakan konten terbaik 
+            bagi Anda.</p>
+            <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                © 2023 Vynix. All rights reserved.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+ 
