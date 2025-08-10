@@ -3,80 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vynix Film</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fff;
-        }
-        header {
-            background: #ff0000;
-            color: white;
-            padding: 12px;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-        }
-        .banner-iklan {
-            display: flex;
-            justify-content: center;
-            margin: 8px 0;
-        }
-        main {
-            padding: 10px;
-        }
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-        }
-        .video-card {
-            background: #f1f1f1;
-            padding: 8px;
-            border-radius: 8px;
-        }
-        .video-card img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .video-card h3 {
-            font-size: 14px;
-            margin: 5px 0 0;
-        }
-    </style>
+    <title>Vynix - Streaming Film</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header">
+        <div class="logo">Vynix</div>
+        <button class="support-btn" id="supportBtn">
+            <i class="fas fa-heart"></i> Support
+        </button>
+    </div>
 
-<header>Vynix Film</header>
+    <div class="ad-container">
+        <div class="ad-block" data-aaad='{"type":"iframe","src":"https://publishers.adsterra.com/ad.js?tagid=9499427"}'></div>
+        <script>
+        (function(){
+            var a = document.getElementsByClassName("ad-block")[0];
+            var options = JSON.parse(a.getAttribute("data-aaad"));
+            a.removeAttribute("data-aaad");
+            
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = options.src;
+            script.async = true;
+            
+            for(var key in options.params){
+                script.setAttribute('data-' + key, options.params[key]);
+            }
+            
+            a.appendChild(script);
+        })();
+        </script>
+    </div>
+    <div class="main-content">
+        <h2 class="section-title">Film Terbaru</h2>
+        <div class="video-grid" id="videoGrid"></div>
+    </div>
 
-<!-- Banner Iklan -->
-<div class="banner-iklan">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : '01a54c6a8d101bebe71994b85de90cbd',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/01a54c6a8d101bebe71994b85de90cbd/invoke.js"></script>
-</div>
-
-<main>
-    <h2>Film Terbaru</h2>
-    <div class="video-grid" id="videoGrid">
-        <div class="video-card">
-            <img src="https://via.placeholder.com/150" alt="Film 1">
-            <h3>Film 1</h3>
-        </div>
-        <div class="video-card">
-            <img src="https://via.placeholder.com/150" alt="Film 2">
-            <h3>Film 2</h3>
+    <div class="modal" id="videoModal">
+        <span class="close-modal" id="closeModal">×</span>
+        <div class="modal-content">
+            <div class="player-container">
+                <iframe class="player-iframe" id="videoPlayer" src="" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+                <h2 class="detail-title" id="modalTitle">Judul Film</h2>
+                <p class="detail-description" id="modalDescription">
+                    Deskripsi film akan muncul di sini.
+                </p>
+            </div>
         </div>
     </div>
-</main>
 
+    <div class="support-modal" id="supportModal">
+        <div class="support-content">
+            <span class="close-support" id="closeSupport">×</span>
+            <h2 style="color: #000; margin-bottom: 20px;">Support Vynix</h2>
+            <p style="margin-bottom: 20px;">Scan QR Code atau transfer ke nomor berikut:</p>
+            <div class="qr-code">
+                <i class="fas fa-qrcode"></i>
+            </div>
+            <div class="dana-number">0812-3456-7890 (DANA)</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3 class="footer-title">Tentang Vynix</h3>
+        <div class="footer-content">
+            <p>Vynix adalah platform streaming film yang menyediakan berbagai konten hiburan berkualitas.</p>
+            <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                © 2023 Vynix. All rights reserved.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
