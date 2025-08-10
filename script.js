@@ -1,66 +1,46 @@
-// Video data
+// Data Film
 const videos = [
     {
         id: 1,
-        title: "Petualangan Luar Angkasa",
-        description: "Mengikuti perjalanan luar angkasa yang menakjubkan dengan visual spektakuler dan cerita yang mendalam tentang eksplorasi manusia di alam semesta.",
-        thumbnail: "https://via.placeholder.com/400x225.png?text=Petualangan+Luar+Angkasa", // Ganti dengan URL gambar thumbnail yang sesuai
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Ganti dengan URL embed video YouTube yang sesuai
+        title: "Film Pertama",
+        description: "Deskripsi singkat film pertama.",
+        thumbnail: "https://img.youtube.com/vi/eN04yzHQESc/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/eN04yzHQESc"
     },
     {
         id: 2,
-        title: "Misteri Hutan Gelap",
-        description: "Thriller misteri yang berlatar di hutan terpencil dengan twist yang tidak terduga dan karakter yang kompleks dalam pencarian kebenaran.",
-        thumbnail: "https://via.placeholder.com/400x225.png?text=Misteri+Hutan+Gelap",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
-    },
-    {
-        id: 3,
-        title: "Cinta di Musim Semi",
-        description: "Kisah romantis yang menghangatkan hati tentang cinta yang tumbuh di tengah tantangan kehidupan dan perbedaan latar belakang.",
-        thumbnail: "https://via.placeholder.com/400x225.png?text=Cinta+di+Musim+Semi",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-    },
-    {
-        id: 4,
-        title: "Pahlawan Terakhir",
-        description: "Aksi epik tentang seorang pahlawan yang harus menyelamatkan dunia dari kehancuran dengan mengorbankan segalanya demi masa depan umat manusia.",
-        thumbnail: "https://via.placeholder.com/400x225.png?text=Pahlawan+Terakhir",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-    },
-    {
-        id: 5,
-        title: "Komedi Keluarga",
-        description: "Komedi lucu dan menghibur yang menggambarkan kehidupan keluarga biasa dengan situasi absurd dan karakter yang penuh warna.",
-        thumbnail: "https://via.placeholder.com/400x225.png?text=Komedi+Keluarga",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title: "Film Kedua",
+        description: "Deskripsi singkat film kedua.",
+        thumbnail: "https://img.youtube.com/vi/wt8R5jahzJo/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/wt8R5jahzJo"
     }
+    // Tinggal tambah objek lagi untuk film ke-3, 4, dst.
 ];
 
-// Generate video cards
+// Generate Kartu Film
 const videoGrid = document.getElementById('videoGrid');
-        
+
 videos.forEach(video => {
     const videoCard = document.createElement('div');
     videoCard.className = 'video-card';
     videoCard.innerHTML = `
         <div class="video-thumbnail">
-            <img src="${video.thumbnail}" alt="${video.title} Thumbnail">
+            <img src="${video.thumbnail}" alt="${video.title}">
             <i class="fas fa-play play-icon"></i>
         </div>
         <div class="video-info">
             <div class="video-title">${video.title}</div>
         </div>
     `;
-    
+
     videoCard.addEventListener('click', () => {
         openVideoModal(video);
     });
-    
+
     videoGrid.appendChild(videoCard);
 });
 
-// Modal functions
+// Modal Player
 const videoModal = document.getElementById('videoModal');
 const closeModal = document.getElementById('closeModal');
 const videoPlayer = document.getElementById('videoPlayer');
@@ -89,7 +69,7 @@ videoModal.addEventListener('click', (e) => {
     }
 });
 
-// Support modal functions
+// Modal Support
 const supportModal = document.getElementById('supportModal');
 const supportBtn = document.getElementById('supportBtn');
 const closeSupport = document.getElementById('closeSupport');
@@ -111,7 +91,7 @@ supportModal.addEventListener('click', (e) => {
     }
 });
 
-// Close modals with Escape key
+// Tombol ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         if (videoModal.style.display === 'flex') {
