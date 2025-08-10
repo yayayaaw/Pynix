@@ -1,20 +1,15 @@
 // Data Film
 const videos = [
     {
-        id: 1,
         title: "Film Pertama",
         description: "Deskripsi singkat film pertama.",
-        thumbnail: "https://img.youtube.com/vi/eN04yzHQESc/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/eN04yzHQESc"
+        youtubeId: "wt8R5jahzJo"
     },
     {
-        id: 2,
         title: "Film Kedua",
         description: "Deskripsi singkat film kedua.",
-        thumbnail: "https://img.youtube.com/vi/wt8R5jahzJo/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/wt8R5jahzJo"
+        youtubeId: "eN04yzHQESc"
     }
-    // Tinggal tambah objek lagi untuk film ke-3, 4, dst.
 ];
 
 // Generate Kartu Film
@@ -25,7 +20,7 @@ videos.forEach(video => {
     videoCard.className = 'video-card';
     videoCard.innerHTML = `
         <div class="video-thumbnail">
-            <img src="${video.thumbnail}" alt="${video.title}">
+            <img src="https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg" alt="${video.title}">
             <i class="fas fa-play play-icon"></i>
         </div>
         <div class="video-info">
@@ -50,7 +45,7 @@ const modalDescription = document.getElementById('modalDescription');
 function openVideoModal(video) {
     modalTitle.textContent = video.title;
     modalDescription.textContent = video.description;
-    videoPlayer.src = video.videoUrl;
+    videoPlayer.src = `https://www.youtube.com/embed/${video.youtubeId}`;
     videoModal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
