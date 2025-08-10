@@ -1,4 +1,5 @@
 * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,10 +10,9 @@ body {
     background-color: #ffffff;
     color: #000000;
     overflow-x: hidden;
-    padding-top: 60px; /* Jarak untuk header fixed */
+    padding-top: 60px;
 }
 
-/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -50,14 +50,11 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling untuk penempatan iklan */
 .ad-container {
     padding: 10px;
-    background-color: #f0f0f0; /* Memberi warna latar belakang agar terlihat jelas */
     text-align: center;
 }
 
-/* Main Content */
 .main-content {
     padding: 20px;
 }
@@ -69,7 +66,6 @@ body {
     color: #000000;
 }
 
-/* Video Grid */
 .video-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,7 +127,6 @@ body {
     color: #000000;
 }
 
-/* Video Player Modal */
 .modal {
     display: none;
     position: fixed;
@@ -174,7 +169,7 @@ body {
 .player-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
 }
 
 .player-iframe {
@@ -203,7 +198,6 @@ body {
     color: #333;
 }
 
-/* Support Modal */
 .support-modal {
     display: none;
     position: fixed;
@@ -256,7 +250,6 @@ body {
     margin: 15px 0;
 }
 
-/* Footer */
 .footer {
     background: #f8f9fa;
     padding: 30px 20px;
@@ -279,7 +272,6 @@ body {
     color: #333;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
     .video-grid {
         grid-template-columns: repeat(2, 1fr);
