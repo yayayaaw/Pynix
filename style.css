@@ -1,5 +1,4 @@
-
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,12 +9,14 @@ body {
     background-color: #ffffff;
     color: #000000;
     overflow-x: hidden;
+    padding-top: 60px; /* Jarak untuk header fixed */
 }
 
 /* Header Styles */
 .header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -54,12 +55,10 @@ body {
     padding: 10px;
     background-color: #f0f0f0; /* Memberi warna latar belakang agar terlihat jelas */
     text-align: center;
-    margin-top: 80px; /* Nilai ini harus sama dengan tinggi header Anda */
 }
 
 /* Main Content */
 .main-content {
-    margin-top: 0; /* Diatur ulang agar tidak menumpuk dengan iklan */
     padding: 20px;
 }
 
@@ -300,3 +299,4 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
