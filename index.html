@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -16,25 +18,16 @@
     </div>
 
     <div class="ad-container">
-        <div class="ad-block" data-aaad='{"type":"iframe","src":"https://publishers.adsterra.com/ad.js?tagid=9499427"}'></div>
-        <script>
-        (function(){
-            var a = document.getElementsByClassName("ad-block")[0];
-            var options = JSON.parse(a.getAttribute("data-aaad"));
-            a.removeAttribute("data-aaad");
-            
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = options.src;
-            script.async = true;
-            
-            for(var key in options.params){
-                script.setAttribute('data-' + key, options.params[key]);
-            }
-            
-            a.appendChild(script);
-        })();
+        <script type="text/javascript">
+            atOptions = {
+                'key': '01a5c46a8d101ebbe71994b5de90cbd',
+                'format': 'iframe',
+                'height': 50,
+                'width': 320,
+                'params': {}
+            };
         </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/01a5c46a8d101ebbe71994b5de90cbd/invoke.js"></script>
     </div>
     <div class="main-content">
         <h2 class="section-title">Film Terbaru</h2>
@@ -81,4 +74,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
