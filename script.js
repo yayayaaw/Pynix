@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventLdocument.addEventListener("DOMContentLoaded", function() {
     const videos = [
         { title: "Dente's comedy", youtubeId: "fWdWYm0sEZ4" },
         { title: "Treta", youtubeId: "ZFnvrQNgnaY" },
