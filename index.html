@@ -10,9 +10,14 @@
 <body>
     <div class="header">
         <div class="logo">Vynix</div>
-        <button class="support-btn" id="supportBtn">
-            <i class="fas fa-heart"></i> Support
-        </button>
+        <div class="header-right">
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <button class="support-btn" id="supportBtn">
+                <i class="fas fa-heart"></i> Support
+            </button>
+        </div>
     </div>
 
     <div class="ad-container">
@@ -27,22 +32,29 @@
         </script>
         <script type="text/javascript" src="//www.highperformanceformat.com/01a5c46a8d101bebe71994b85de90cbd/invoke.js"></script>
     </div>
-    <div class="main-content">
-        <h2 class="section-title">Film Terbaru</h2>
-        <div class="video-grid" id="videoGrid"></div>
+    
+    <div class="main-content" id="main-content">
+        </div>
+
+    <div class="footer">
+        <h3 class="footer-title">Tentang Vynix</h3>
+        <div class="footer-content">
+            <p>Vynix adalah platform streaming film yang menyediakan berbagai konten hiburan berkualitas.</p>
+            <p style="margin-top: 15px; font-size: 13px;">
+                © 2023 Vynix. All rights reserved.
+            </p>
+        </div>
     </div>
 
     <div class="modal" id="videoModal">
         <span class="close-modal" id="closeModal">×</span>
         <div class="modal-content">
             <div class="player-container">
-                <iframe class="player-iframe" id="videoPlayer" src="" allowfullscreen></iframe>
+                <iframe class="player-iframe" id="videoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video-details">
-                <h2 class="detail-title" id="modalTitle">Judul Film</h2>
-                <p class="detail-description" id="modalDescription">
-                    Deskripsi film akan muncul di sini.
-                </p>
+                <h2 class="detail-title" id="modalTitle"></h2>
+                <p class="detail-description" id="modalDescription"></p>
             </div>
         </div>
     </div>
@@ -50,7 +62,7 @@
     <div class="support-modal" id="supportModal">
         <div class="support-content">
             <span class="close-support" id="closeSupport">×</span>
-            <h2 style="color: #000; margin-bottom: 20px;">Support Vynix</h2>
+            <h2 style="color: var(--text-color-light); margin-bottom: 20px;">Support Vynix</h2>
             <p style="margin-bottom: 20px;">Scan QR Code atau transfer ke nomor berikut:</p>
             <div class="qr-code">
                 <i class="fas fa-qrcode"></i>
@@ -59,16 +71,7 @@
         </div>
     </div>
 
-    <div class="footer">
-        <h3 class="footer-title">Tentang Vynix</h3>
-        <div class="footer-content">
-            <p>Vynix adalah platform streaming film yang menyediakan berbagai konten hiburan berkualitas.</p>
-            <p style="margin-top: 15px; font-size: 13px; color: #666;">
-                © 2023 Vynix. All rights reserved.
-            </p>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
+
